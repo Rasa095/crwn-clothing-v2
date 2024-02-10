@@ -6,11 +6,11 @@ import {UserContext} from '../../contexts/user.context'
 import { signOutUser } from "../../utils/firebase/firebase.utils";
 import CartIcon from "../../components/cart-icon/cart-icon.component";
 import CartDropDown from "../../components/cart-dropdown/cart-dropdown.component"
-import { CardContext } from "../../contexts/carOpen";
+import { CartContext } from "../../contexts/cart.context";
 import './navigation.style.scss';
 const  Navigation =()=>{
    const {currentUser}=useContext(UserContext);
-   const {isCardOpen}=useContext(CardContext);
+   const {isCardOpen}=useContext(CartContext);
 
    const singOutHandler= async()=>{
       await signOutUser();

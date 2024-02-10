@@ -1,15 +1,15 @@
 import { createContext,useState } from "react";
 
- export const CardContext=createContext({
+ export const CartContext=createContext({
     isCardOpen:false,
     setIsCardOpen:()=>{},
 })
 
-export const CardProvider=({children})=>{
+export const CartProvider=({children})=>{
 
     const [isCardOpen,setIsCardOpen]=useState(false);
     const value={isCardOpen,setIsCardOpen};
-    return <CardContext.Provider value={value}>{children}</CardContext.Provider>
+    return <CartContext.Provider value={value}>{children}</CartContext.Provider>
 }
 
 
